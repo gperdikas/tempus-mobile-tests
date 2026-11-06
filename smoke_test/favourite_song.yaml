@@ -1,0 +1,26 @@
+# This test have a pre-condition -- "sonican-global-chase" song should be not-favored when test starts
+
+appId: com.eddyizm.tempus
+---
+- launchApp
+- tapOn:
+    id: "libraryFragment"
+- tapOn:
+    id: "music_folder_recycler_view"
+- tapOn: "[Unknown Artist]"
+- tapOn: "[Unknown Album]"
+- tapOn: "sonican-global-chase"
+- tapOn:
+    id: "placeholder_left_view"
+- tapOn:
+    id: "player_play_pause_placeholder_view"
+- tapOn:
+    id: "button_favorite"
+- assertVisible:
+    id: "button_favorite"
+    checked: true
+- tapOn:
+    id: "button_favorite"
+- assertVisible:
+    id: "button_favorite"
+    checked: false

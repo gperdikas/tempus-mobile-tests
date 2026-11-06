@@ -1,0 +1,16 @@
+- scrollUntilVisible:
+    element:
+      id: "playlist_title_text_view"
+- tapOn: "sonican-global-chase"
+appId: com.eddyizm.tempus
+---
+- launchApp
+- tapOn:
+    id: "action_search"
+- tapOn:
+    id: "search_bar"
+- inputText: "global"
+- assertVisible:
+    text: ".*global.*"
+    id: "search_suggestion_title"
+
