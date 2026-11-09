@@ -1,0 +1,11 @@
+appId: com.eddyizm.tempus
+---
+- runFlow:
+    when:
+        visible:
+            id: "player_header_layout"
+    commands:
+        - swipe:
+            duration: 600
+            start: 50%, 87%
+            end: 50%, 99%

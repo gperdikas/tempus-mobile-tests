@@ -1,15 +1,7 @@
 appId: com.eddyizm.tempus
 ---
 - launchApp
-- runFlow:
-    when:
-      visible:
-        id: "player_header_layout"
-    commands:
-      - swipe:
-          start: 50%, 87%
-          end: 50%, 99%
-          duration: 500
+- runFlow: ../subflows/close_mini_player.yaml
 - scrollUntilVisible:
     element: "playlist_tempus"
     visibilityPercentage: 100
@@ -17,10 +9,11 @@ appId: com.eddyizm.tempus
 - tapOn: "playlist_tempus"
 - assertVisible:
     id: "song_cover_image_view"
+- assertNotVisible:
+    id: "play_pause_icon"
 - tapOn:
     id: "playlist_page_play_button"
 - assertVisible:
     id: "play_pause_icon"
-- tapOn:
-    id: "play_pause_icon"
-
+# - tapOn:
+#     id: "play_pause_icon"

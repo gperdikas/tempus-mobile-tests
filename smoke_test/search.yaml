@@ -1,6 +1,7 @@
 appId: com.eddyizm.tempus
 ---
 - launchApp
+
 - tapOn:
     id: "action_search"
 - tapOn:

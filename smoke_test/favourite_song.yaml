@@ -1,4 +1,4 @@
-# This test have a pre-condition -- "sonican-global-chase" song should be not-favored when test starts
+# This test have a pre-condition -- "global 1" song should be not-favored when test starts
 
 appId: com.eddyizm.tempus
 ---
