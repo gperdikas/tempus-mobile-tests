@@ -1,0 +1,14 @@
+appId: com.eddyizm.tempus
+---
+- launchApp
+
+- runFlow: ../subflows/close_mini_player.yaml
+- assertNotVisible:
+    id: "player_header_layout"
+- tapOn:
+    id: "discovery_text_view_clickable"
+- assertVisible:
+    id: "player_header_layout"
+- assertVisible:
+    id: "player_header_button"
+    checked: true

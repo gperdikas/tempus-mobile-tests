@@ -1,6 +1,7 @@
 appId: com.eddyizm.tempus
 ---
 - launchApp
+
 - runFlow: ../subflows/close_mini_player.yaml
 - scrollUntilVisible:
     element: "playlist_tempus"
@@ -15,5 +16,3 @@ appId: com.eddyizm.tempus
     id: "playlist_page_play_button"
 - assertVisible:
     id: "play_pause_icon"
-# - tapOn:
-#     id: "play_pause_icon"
