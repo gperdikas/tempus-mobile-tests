@@ -7,9 +7,12 @@ appId: com.eddyizm.tempus
     id: "libraryFragment"
 - tapOn:
     id: "music_folder_recycler_view"
-- tapOn: "[Unknown Artist]"
-- tapOn: "[Unknown Album]"
-- tapOn: "sonican-global-chase"
+- tapOn:
+    id: "music_index_title_text_view"
+    index: 2
+- tapOn:
+    id: "music_directory_title_text_view"
+- tapOn: "global 1"
 - tapOn:
     id: "placeholder_left_view"
 - tapOn:

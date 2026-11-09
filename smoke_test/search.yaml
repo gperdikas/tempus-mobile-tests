@@ -1,7 +1,3 @@
-- scrollUntilVisible:
-    element:
-      id: "playlist_title_text_view"
-- tapOn: "sonican-global-chase"
 appId: com.eddyizm.tempus
 ---
 - launchApp

@@ -11,10 +11,10 @@ appId: com.eddyizm.tempus
           end: 50%, 99%
           duration: 500
 - scrollUntilVisible:
-    element: "playlist1"
+    element: "playlist_tempus"
     visibilityPercentage: 100
     centerElement: true
-- tapOn: "playlist1"
+- tapOn: "playlist_tempus"
 - assertVisible:
     id: "song_cover_image_view"
 - tapOn:
