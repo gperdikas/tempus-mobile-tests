@@ -1,0 +1,32 @@
+appId: com.eddyizm.tempus
+---
+- launchApp
+
+# - runFlow: ../subflows/close_mini_player.yaml
+- tapOn:
+    id: "discovery_text_view_clickable"
+- assertVisible:
+    id: "player_header_button"
+    checked: true
+- tapOn:
+    id: "player_header_button"
+- assertVisible:
+    id: "player_header_button"
+    checked: false
+
+# get before song's title
+- copyTextFrom:
+    id: "player_header_media_title_label"
+- evalScript: ${output.titleBefore = maestro.copiedText}
+
+# click next button
+- tapOn:
+    id: "placeholder_right_view"
+
+# get after song's title
+- copyTextFrom:
+    id: "player_header_media_title_label"
+- evalScript: ${output.titleAfter = maestro.copiedText}
+
+# validate titles equality
+- assertTrue: ${output.titleBefore != output.titleAfter}
