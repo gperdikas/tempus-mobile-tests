@@ -2,7 +2,8 @@ appId: com.eddyizm.tempus
 ---
 - launchApp
 
-- runFlow: ../subflows/close_mini_player.yaml
+- runFlow: ../helper_flows/server_login_helper.yaml
+- runFlow: ../helper_flows/close_mini_player.yaml
 - scrollUntilVisible:
     element: "playlist_tempus"
     visibilityPercentage: 100

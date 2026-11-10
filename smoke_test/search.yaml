@@ -2,6 +2,7 @@ appId: com.eddyizm.tempus
 ---
 - launchApp
 
+- runFlow: ../helper_flows/server_login_helper.yaml
 - tapOn:
     id: "action_search"
 - tapOn:
