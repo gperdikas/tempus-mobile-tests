@@ -1,0 +1,15 @@
+appId: com.eddyizm.tempus
+---
+- runFlow:
+    when:
+        notVisible:
+            id: "server_info_sector"
+    commands:
+        - tapOn:
+            id: "action_settings"
+        - tapOn:
+            id: "title"
+            text: "General"
+        - tapOn:
+            id: "title"
+            text: "Log out"

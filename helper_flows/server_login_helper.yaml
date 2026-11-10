@@ -1,0 +1,8 @@
+appId: com.eddyizm.tempus
+---
+- runFlow:
+    when:
+        visible:
+            id: "server_info_sector"
+    commands:
+        - tapOn: "tempusUser1_server"
