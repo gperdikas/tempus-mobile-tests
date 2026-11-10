@@ -18,12 +18,9 @@ appId: com.eddyizm.tempus
 - copyTextFrom:
     id: "player_header_media_title_label"
 - evalScript: ${output.titleBefore = maestro.copiedText}
-
 - tapOn:
     id: "placeholder_right_view"
-
 - copyTextFrom:
     id: "player_header_media_title_label"
 - evalScript: ${output.titleAfter = maestro.copiedText}
-
 - assertTrue: ${output.titleBefore != output.titleAfter}

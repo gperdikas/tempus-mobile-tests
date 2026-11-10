@@ -1,0 +1,36 @@
+# To run this test songs' titles have to be unique
+
+appId: com.eddyizm.tempus
+---
+- launchApp
+
+- tapOn:
+    id: "discovery_text_view_clickable"
+- tapOn:
+    id: "placeholder_left_view"
+
+- assertVisible:
+    id: "exo_play_pause"
+    text: "Pause"
+
+- tapOn:
+    id: "exo_play_pause"
+- assertVisible:
+    id: "exo_play_pause"
+    text: "Play"
+
+- tapOn:
+    id: "exo_play_pause"
+- assertVisible:
+    id: "exo_play_pause"
+    text: "Pause"
+
+- copyTextFrom:
+    id: "player_media_title_label"
+- evalScript: ${output.titleBefore = maestro.copiedText}
+- tapOn:
+    id: "placeholder_view_middle_right"
+- copyTextFrom:
+    id: "player_media_title_label"
+- evalScript: ${output.titleAfter = maestro.copiedText}
+- assertTrue: ${output.titleBefore != output.titleAfter}
