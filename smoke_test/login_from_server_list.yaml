@@ -1,0 +1,13 @@
+appId: com.eddyizm.tempus
+---
+- launchApp
+- runFlow: ../helper_flows/server_logout_helper.yaml
+
+- assertVisible:
+    id: "server_list_recycler_view"
+
+- tapOn:
+    id: "server_name_text_view"
+    text: "tempusUser1_server"
+- assertVisible:
+    id: "home_linear_layout_container"

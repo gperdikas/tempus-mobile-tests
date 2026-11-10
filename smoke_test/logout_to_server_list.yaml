@@ -1,0 +1,15 @@
+appId: com.eddyizm.tempus
+---
+- launchApp
+
+- runFlow: ../helper_flows/server_login_helper.yaml
+- tapOn:
+    id: "action_settings"
+- tapOn:
+    id: "title"
+    text: "General"
+- tapOn:
+    id: "title"
+    text: "Log out"
+- assertVisible:
+    id: "server_info_sector"
