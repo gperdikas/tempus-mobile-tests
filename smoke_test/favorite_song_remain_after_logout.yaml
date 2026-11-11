@@ -1,0 +1,56 @@
+appId: com.eddyizm.tempus
+---
+- launchApp
+- runFlow: ../helper_flows/server_login_helper.yaml
+
+- tapOn:
+    id: "libraryFragment"
+- tapOn:
+    id: "music_folder_recycler_view"
+- tapOn:
+    id: "music_index_title_text_view"
+    text: gp
+- tapOn:
+    id: "music_directory_title_text_view"
+- tapOn: "global 1"
+- tapOn:
+    id: "placeholder_left_view"
+- runFlow: ../helper_flows/unfavorite_song.yaml
+- assertVisible:
+    id: "button_favorite"
+    checked: false
+
+- tapOn:
+    id: "button_favorite"
+- assertVisible:
+    id: "button_favorite"
+    checked: true
+
+- swipe:
+    from:
+        id: "directory_info_sector"
+    direction: DOWN
+
+- tapOn:
+    id: "homeFragment"
+
+- runFlow: ../helper_flows/server_logout_helper.yaml
+- assertVisible:
+    id: "server_info_sector"
+- runFlow: ../helper_flows/server_login_helper.yaml
+
+- tapOn:
+    id: "libraryFragment"
+- tapOn:
+    id: "music_folder_recycler_view"
+- tapOn:
+    id: "music_index_title_text_view"
+    text: gp
+- tapOn:
+    id: "music_directory_title_text_view"
+- tapOn: "global 1"
+- tapOn:
+    id: "placeholder_left_view"
+- assertVisible:
+    id: "button_favorite"
+    checked: true
