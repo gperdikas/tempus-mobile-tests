@@ -37,11 +37,12 @@ Project structure
 - Every flow was failed on purpose. The main action was commented out and the flow had to go red
 
 ## Bugs found
-Found while designing and running the manual cases, then reported to Tempus with logs and recordings
-#1307 App crashes on roattion when the add/edit radio or add podcast dialog is open
-#1310 Add/edit radio dialog can't scroll in landscape, last field cut off
-#1313 Full-page Settings screens lose their title on rotation or theme change
-#1314 Theme dropdown doesn;t close after choosing a theme
+Found while designing and running the manual cases, then reported to Tempus with logs and recordings:
+
+-[#1307] App crashes on roattion when the add/edit radio or add podcast dialog is open
+-[#1310] Add/edit radio dialog can't scroll in landscape, last field cut off 
+-[#1313] Full-page Settings screens lose their title on rotation or theme change
+-[#1314] Theme dropdown doesn;t close after choosing a theme
 
 ## Limitations
 - Smoke only: 9 core cases. Most of the app is not covered
