@@ -1,5 +1,3 @@
-# This test have a pre-condition -- "global 1" song should be not-favored when test starts
-
 appId: com.eddyizm.tempus
 ---
 - launchApp
@@ -11,14 +9,17 @@ appId: com.eddyizm.tempus
     id: "music_folder_recycler_view"
 - tapOn:
     id: "music_index_title_text_view"
-    index: 2
+    text: gp
 - tapOn:
     id: "music_directory_title_text_view"
 - tapOn: "global 1"
 - tapOn:
     id: "placeholder_left_view"
-- tapOn:
-    id: "player_play_pause_placeholder_view"
+- runFlow: ../helper_flows/unfavorite_song.yaml
+- assertVisible:
+    id: "button_favorite"
+    checked: false
+
 - tapOn:
     id: "button_favorite"
 - assertVisible:
