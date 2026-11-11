@@ -1,0 +1,10 @@
+appId: com.eddyizm.tempus
+---
+- runFlow:
+    when:
+        visible:
+            id: "button_favorite"
+            checked: true
+    commands:
+        - tapOn:
+            id: "button_favorite"
